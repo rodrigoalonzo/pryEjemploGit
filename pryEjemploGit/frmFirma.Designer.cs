@@ -28,12 +28,49 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "frmFirma";
+            btnPintar = new Button();
+            btnBorrar = new Button();
+            SuspendLayout();
+            // 
+            // btnPintar
+            // 
+            btnPintar.Location = new Point(632, 12);
+            btnPintar.Name = "btnPintar";
+            btnPintar.Size = new Size(75, 23);
+            btnPintar.TabIndex = 0;
+            btnPintar.Text = "Pintar";
+            btnPintar.UseVisualStyleBackColor = true;
+            btnPintar.Click += btnPintar_Click;
+            // 
+            // btnBorrar
+            // 
+            btnBorrar.Location = new Point(713, 12);
+            btnBorrar.Name = "btnBorrar";
+            btnBorrar.Size = new Size(75, 23);
+            btnBorrar.TabIndex = 1;
+            btnBorrar.Text = "Borrar";
+            btnBorrar.UseVisualStyleBackColor = true;
+            btnBorrar.Click += btnBorrar_Click;
+            // 
+            // frmFirma
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.HighlightText;
+            ClientSize = new Size(800, 450);
+            Controls.Add(btnBorrar);
+            Controls.Add(btnPintar);
+            Name = "frmFirma";
+            Text = "frmFirma";
+            MouseDown += frmFirma_MouseDown;
+            MouseMove += frmFirma_MouseMove;
+            MouseUp += frmFirma_MouseUp;
+            ResumeLayout(false);
         }
 
         #endregion
+
+        private Button btnPintar;
+        private Button btnBorrar;
     }
 }
